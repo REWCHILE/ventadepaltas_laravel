@@ -30,8 +30,8 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-all">
-            <span className="text-xl font-bold font-sans">P</span>
+          <div className="flex h-10 w-auto px-3 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-all">
+            <span className="text-sm font-extrabold font-sans tracking-tight">Paltin</span>
           </div>
           <div>
             <span className="text-lg font-extrabold tracking-tight text-zinc-900 dark:text-white font-sans uppercase">

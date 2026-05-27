@@ -11,8 +11,8 @@ export default function Footer() {
           {/* Column 1: Info & Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500 text-white font-sans font-bold">
-                P
+              <div className="flex h-9 w-auto px-2.5 items-center justify-center rounded-lg bg-emerald-500 text-white font-sans font-bold">
+                <span className="text-xs font-extrabold tracking-tight">Paltin</span>
               </div>
               <span className="text-base font-extrabold text-white tracking-tight font-sans uppercase">
                 VENTADEPALTAS<span className="text-emerald-400">.CL</span>

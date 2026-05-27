@@ -25,11 +25,11 @@ export default function ScrollProgressIndicator() {
 
   return (
     <div 
-      className="fixed right-4 top-1/2 -translate-y-1/2 z-50 hidden sm:flex flex-col items-center gap-2 select-none"
+      className="fixed right-1.5 sm:right-4 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-1.5 sm:gap-2 select-none pointer-events-none"
       aria-hidden="true"
     >
       {/* Scroll track indicator */}
-      <div className="h-20 w-[2.5px] bg-zinc-200 dark:bg-zinc-800 rounded-full relative overflow-hidden mb-1">
+      <div className="h-14 sm:h-20 w-[2px] sm:w-[2.5px] bg-zinc-200 dark:bg-zinc-800 rounded-full relative overflow-hidden mb-1">
         <div 
           className="w-full bg-gradient-to-b from-emerald-500 to-green-500 rounded-full transition-all duration-75"
           style={{ height: `${scrollProgress}%` }}
@@ -37,8 +37,8 @@ export default function ScrollProgressIndicator() {
       </div>
 
       {/* Avocado Shape with Seed (Cuesco) Loading Progress */}
-      <div className="relative hover:scale-105 transition-transform duration-300">
-        <svg viewBox="0 0 70 90" className="w-12 h-16 drop-shadow-lg" aria-hidden="true">
+      <div className="relative hover:scale-105 transition-transform duration-300 pointer-events-auto">
+        <svg viewBox="0 0 70 90" className="w-10 h-13 sm:w-12 sm:h-16 drop-shadow-lg" aria-hidden="true">
           {/* Avocado Skin (Dark Green) */}
           <path 
             d="M 35 6 C 47 6, 52 26, 56 46 C 63 68, 59 84, 35 84 C 11 84, 7 68, 14 46 C 18 26, 23 6, 35 6 Z" 

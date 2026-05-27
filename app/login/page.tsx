@@ -95,8 +95,8 @@ function LoginForm() {
         
         {/* Header / Logo */}
         <div className="text-center space-y-2">
-          <Link href="/" className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 mb-2">
-            <span className="text-2xl font-bold font-sans">P</span>
+          <Link href="/" className="inline-flex h-12 w-auto px-3.5 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 mb-2">
+            <span className="text-base font-extrabold font-sans tracking-tight">Paltin</span>
           </Link>
           <h2 className="text-xl font-bold text-zinc-900 dark:text-white font-display uppercase tracking-tight">
             Panel de Control

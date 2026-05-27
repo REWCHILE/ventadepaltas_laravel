@@ -99,7 +99,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         {/* Title */}
         <div className="h-16 flex items-center px-6 border-b border-zinc-200 dark:border-zinc-800">
           <Link href="/admin" className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-bold text-base">P</div>
+            <div className="h-8 w-auto px-2 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-extrabold text-xs tracking-tight">Paltin</div>
             <div>
               <span className="font-extrabold text-sm text-zinc-900 dark:text-white uppercase tracking-tight">AdminPanel</span>
               <span className="block text-[9px] text-zinc-500 uppercase tracking-widest -mt-1 font-bold">ventadepaltas.cl</span>
@@ -164,7 +164,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         {/* Mobile Header Banner */}
         <header className="h-16 bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 flex items-center justify-between px-6 md:hidden shrink-0">
           <Link href="/admin" className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-bold text-base">P</div>
+            <div className="h-8 w-auto px-2 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-extrabold text-xs tracking-tight">Paltin</div>
             <span className="font-extrabold text-sm text-zinc-900 dark:text-white uppercase">Admin</span>
           </Link>
           <button

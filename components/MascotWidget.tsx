@@ -11,6 +11,11 @@ export default function MascotWidget() {
 
   useEffect(() => {
     setMounted(true)
+    
+    // Check if the user closed the bubble in this session
+    const isClosed = sessionStorage.getItem('paltin-bubble-closed') === 'true'
+    if (isClosed) return
+
     // Auto-open speech bubble after 3 seconds on first load
     const timer = setTimeout(() => {
       setIsOpen(true)
@@ -20,8 +25,14 @@ export default function MascotWidget() {
 
   if (!mounted) return null
 
+  const handleClose = () => {
+    setIsOpen(false)
+    sessionStorage.setItem('paltin-bubble-closed', 'true')
+  }
+
   const handleScrollToForm = () => {
     setIsOpen(false)
+    sessionStorage.setItem('paltin-bubble-closed', 'true')
     const element = document.getElementById('cotizar')
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
@@ -44,7 +55,7 @@ export default function MascotWidget() {
 
           {/* Close button */}
           <button
-            onClick={() => setIsOpen(false)}
+            onClick={handleClose}
             className="absolute top-3 right-3 text-zinc-400 hover:text-zinc-650 dark:hover:text-white transition-colors cursor-pointer z-20"
             aria-label="Cerrar mensaje"
           >

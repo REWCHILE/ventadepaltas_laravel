@@ -2,7 +2,11 @@
 
 import React, { useRef, useEffect } from 'react'
 
-export default function AvocadoParticles() {
+interface AvocadoParticlesProps {
+  className?: string
+}
+
+export default function AvocadoParticles({ className = "absolute inset-0 w-full h-full pointer-events-auto z-0 opacity-20 dark:opacity-15" }: AvocadoParticlesProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -154,7 +158,7 @@ export default function AvocadoParticles() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full pointer-events-auto z-0 opacity-20 dark:opacity-15"
+      className={className}
     />
   )
 }

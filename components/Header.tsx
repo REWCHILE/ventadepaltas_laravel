@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
@@ -30,8 +31,14 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="flex h-10 w-auto px-3 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-all">
-            <span className="text-sm font-extrabold font-sans tracking-tight">Paltin</span>
+          <div className="relative h-10 w-10 overflow-hidden rounded-full border border-emerald-500 bg-white shadow-sm shadow-emerald-500/10 group-hover:scale-105 transition-all flex items-center justify-center">
+            <Image
+              src="/images/avocado_mascot.png"
+              alt="Paltín - Mascota Oficial"
+              width={32}
+              height={32}
+              className="object-contain"
+            />
           </div>
           <div>
             <span className="text-lg font-extrabold tracking-tight text-zinc-900 dark:text-white font-sans uppercase">

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import { LayoutDashboard, FileSpreadsheet, FileText, Search, LogOut, ChevronRight, Menu, X, ArrowLeft, ShieldAlert } from 'lucide-react'
+import Image from 'next/image'
 
 interface AdminLayoutProps {
   children: React.ReactNode
@@ -99,7 +100,15 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         {/* Title */}
         <div className="h-16 flex items-center px-6 border-b border-zinc-200 dark:border-zinc-800">
           <Link href="/admin" className="flex items-center gap-2">
-            <div className="h-8 w-auto px-2 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-extrabold text-xs tracking-tight">Paltin</div>
+            <div className="relative h-8 w-8 overflow-hidden rounded-full border border-emerald-500 bg-white flex items-center justify-center">
+              <Image
+                src="/images/avocado_mascot.png"
+                alt="Paltín - Mascota Oficial"
+                width={24}
+                height={24}
+                className="object-contain"
+              />
+            </div>
             <div>
               <span className="font-extrabold text-sm text-zinc-900 dark:text-white uppercase tracking-tight">AdminPanel</span>
               <span className="block text-[9px] text-zinc-500 uppercase tracking-widest -mt-1 font-bold">ventadepaltas.cl</span>
@@ -164,7 +173,15 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         {/* Mobile Header Banner */}
         <header className="h-16 bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 flex items-center justify-between px-6 md:hidden shrink-0">
           <Link href="/admin" className="flex items-center gap-2">
-            <div className="h-8 w-auto px-2 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-extrabold text-xs tracking-tight">Paltin</div>
+            <div className="relative h-8 w-8 overflow-hidden rounded-full border border-emerald-500 bg-white flex items-center justify-center">
+              <Image
+                src="/images/avocado_mascot.png"
+                alt="Paltín - Mascota Oficial"
+                width={24}
+                height={24}
+                className="object-contain"
+              />
+            </div>
             <span className="font-extrabold text-sm text-zinc-900 dark:text-white uppercase">Admin</span>
           </Link>
           <button

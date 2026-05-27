@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import { AlertCircle, Loader2, KeyRound } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 function LoginForm() {
   const router = useRouter()
@@ -95,8 +96,14 @@ function LoginForm() {
         
         {/* Header / Logo */}
         <div className="text-center space-y-2">
-          <Link href="/" className="inline-flex h-12 w-auto px-3.5 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 mb-2">
-            <span className="text-base font-extrabold font-sans tracking-tight">Paltin</span>
+          <Link href="/" className="inline-flex h-16 w-16 items-center justify-center rounded-full border-2 border-emerald-500 bg-white shadow-lg shadow-emerald-500/10 overflow-hidden mb-2 hover:scale-105 transition-transform">
+            <Image
+              src="/images/avocado_mascot.png"
+              alt="Paltín - Mascota Oficial"
+              width={52}
+              height={52}
+              className="object-contain"
+            />
           </Link>
           <h2 className="text-xl font-bold text-zinc-900 dark:text-white font-display uppercase tracking-tight">
             Panel de Control

@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-montserrat), sans-serif;
+  --font-display: var(--font-montserrat), sans-serif;
+  
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+}
+
+:root {
+  --background: #fafaf9;
+  --foreground: #1c1917;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #09090b;
+    --foreground: #fafafa;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Global Public Headings */
+.public-site h1,
+.public-site h2,
+.public-site h3,
+.public-site h4,
+.public-site h5,
+.public-site h6 {
+  font-family: var(--font-display);
+}
+
+/* Premium UI Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass-panel {
+  background: rgba(9, 9, 11, 0.75);
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--color-emerald-600), var(--color-green-500));
+}
+
+.dark .gradient-text {
+  background-image: linear-gradient(to right, var(--color-emerald-400), var(--color-green-300));
+}
+
+.hero-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+/* Viewport Scroll Reveal Animations */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-active[data-reveal] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered entrance delays */
+.delay-0 { transition-delay: 0ms; }
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Premium Slow Panning Background Animation */
+@keyframes premiumBgPan {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.premium-pan-bg {
+  background-image: radial-gradient(circle at center, rgba(9, 9, 11, 0.82) 0%, rgba(9, 9, 11, 0.98) 100%), url('/images/premium_dark_bg.png');
+  background-size: cover, 115% 115%;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  animation: premiumBgPan 45s ease-in-out infinite;
+}
+
+/* Mascot Gentle Floating Animation */
+@keyframes premiumFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-premium-float {
+  animation: premiumFloat 4s ease-in-out infinite;
+}
+
+

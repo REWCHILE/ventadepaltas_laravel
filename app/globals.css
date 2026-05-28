@@ -9,6 +9,11 @@
   --color-brand-500: #10b981;
   --color-brand-600: #059669;
   --color-brand-700: #047857;
+
+  --color-zinc-150: #ececed;
+  --color-zinc-155: #eaeaec;
+  --color-zinc-750: #333338;
+  --color-zinc-850: #202024;
 }
 
 :root {

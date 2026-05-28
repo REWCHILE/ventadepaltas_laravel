@@ -11,9 +11,6 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Venta de Paltas Hass al por Mayor | VENTADEPALTAS.CL",
   description: "Proveedor líder de palta Hass premium en Chile. Cotiza al por mayor para restaurantes, casinos, hoteles y distribuidoras.",
-  icons: {
-    icon: "/images/avocado_mascot.png",
-  },
 };
 
 export default function RootLayout({

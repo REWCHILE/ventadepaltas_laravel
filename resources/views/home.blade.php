@@ -14,7 +14,7 @@
   "logo": "https://ventadepaltas.cl/images/premium_hass_avocados.png",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+56912345678",
+    "telephone": "+56957803219",
     "contactType": "sales",
     "areaServed": "CL",
     "availableLanguage": "Spanish"
@@ -27,7 +27,7 @@
   "@type": "LocalBusiness",
   "name": "VENTADEPALTAS.CL - Venta de Paltas al por Mayor",
   "image": "https://ventadepaltas.cl/images/premium_hass_avocados.png",
-  "telephone": "+56912345678",
+  "telephone": "+56957803219",
   "email": "contacto@ventadepaltas.cl",
   "address": {
     "@type": "PostalAddress",

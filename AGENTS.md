@@ -1,5 +1,9 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+# VENTADEPALTAS.CL - Laravel Rules & Architecture Guidelines
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+This is a **Laravel 12 / 13 (PHP 8.3+)** web application with **Blade, Tailwind CSS, Alpine.js, Lucide Icons, and MySQL**.
+
+## Guidelines:
+1. **PHP/Laravel**: Follow standard Laravel conventions (Eloquent models, Controllers, Blade views, Form Requests, Seeders).
+2. **Design & Views**: Use Blade components in `resources/views/components/` and layouts in `resources/views/layouts/`.
+3. **Database**: Manage schema strictly via Laravel migrations in `database/migrations/`.
+4. **CRM & SEO Engine**: All dynamic programmatic SEO pages are managed in the `seo_pages` table and served via `SeoPageController`.

@@ -271,7 +271,7 @@
                     <ul class="space-y-2.5">
                         <li class="flex items-center gap-2">
                             <i data-lucide="phone" class="w-4 h-4 text-emerald-400 shrink-0"></i>
-                            <a href="tel:+56912345678" class="hover:text-white font-semibold">+56 9 1234 5678</a>
+                            <a href="tel:+56957803219" class="hover:text-white font-semibold">+56 9 5780 3219</a>
                         </li>
                         <li class="flex items-center gap-2">
                             <i data-lucide="mail" class="w-4 h-4 text-emerald-400 shrink-0"></i>
@@ -301,6 +301,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Action Button -->
+    @include('components.whatsapp-button')
 
     <!-- Mascot Widget ("Paltín") -->
     @include('components.mascot-widget')

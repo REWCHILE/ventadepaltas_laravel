@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\AdminLeadController;
 use App\Http\Controllers\Admin\AdminSeoPageController;
 use App\Http\Controllers\Admin\AdminBlogController;
+use App\Http\Controllers\Admin\AdminSettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +65,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::get('/leads', [AdminLeadController::class, 'index'])->name('leads.index');
     Route::get('/leads/export', [AdminLeadController::class, 'exportCsv'])->name('leads.export');
     Route::get('/leads/{lead}', [AdminLeadController::class, 'show'])->name('leads.show');
+    Route::get('/leads/{lead}/pdf', [AdminLeadController::class, 'pdfQuote'])->name('leads.pdf');
     Route::patch('/leads/{lead}/status', [AdminLeadController::class, 'updateStatus'])->name('leads.status');
     Route::post('/leads/{lead}/notes', [AdminLeadController::class, 'addNote'])->name('leads.notes');
 
@@ -80,6 +82,12 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::put('/blog/{post}', [AdminBlogController::class, 'update'])->name('blog.update');
     Route::patch('/blog/{post}/toggle', [AdminBlogController::class, 'togglePublish'])->name('blog.toggle');
     Route::delete('/blog/{post}', [AdminBlogController::class, 'destroy'])->name('blog.destroy');
+
+    // SMTP & Notification Settings
+    Route::get('/settings/smtp', [AdminSettingsController::class, 'smtp'])->name('settings.smtp');
+    Route::post('/settings/smtp', [AdminSettingsController::class, 'updateSmtp'])->name('settings.smtp.update');
+    Route::post('/settings/smtp/test-email', [AdminSettingsController::class, 'testEmail'])->name('settings.smtp.test-email');
+    Route::post('/settings/smtp/test-webhook', [AdminSettingsController::class, 'testWebhook'])->name('settings.smtp.test-webhook');
 });
 
 /*

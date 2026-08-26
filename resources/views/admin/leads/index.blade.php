@@ -138,10 +138,16 @@
                             </span>
                         </td>
                         <td class="p-4 text-right">
-                            <button @click="openLeadModal({{ $lead->id }})" class="px-3 py-1.5 rounded-xl bg-zinc-800 text-zinc-200 hover:text-white hover:bg-emerald-600 transition-all font-bold text-xs inline-flex items-center gap-1.5 cursor-pointer">
-                                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
-                                <span>Ver</span>
-                            </button>
+                            <div class="flex items-center justify-end gap-2">
+                                <a href="{{ route('admin.leads.pdf', $lead) }}" target="_blank" title="Ver Presupuesto PDF" class="px-2.5 py-1.5 rounded-xl bg-zinc-800 text-zinc-300 hover:text-emerald-400 hover:bg-zinc-750 transition-all font-bold text-xs inline-flex items-center gap-1">
+                                    <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                                    <span class="hidden sm:inline">PDF</span>
+                                </a>
+                                <button @click="openLeadModal({{ $lead->id }})" class="px-3 py-1.5 rounded-xl bg-zinc-800 text-zinc-200 hover:text-white hover:bg-emerald-600 transition-all font-bold text-xs inline-flex items-center gap-1.5 cursor-pointer">
+                                    <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                                    <span>Ver</span>
+                                </button>
+                            </div>
                         </td>
                     </tr>
                     @empty
@@ -188,13 +194,21 @@
             <div x-show="!loadingLead && selectedLead" class="space-y-6">
                 
                 <!-- Header -->
-                <div class="flex items-start justify-between pr-10 border-b border-zinc-800 pb-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pr-10 border-b border-zinc-800 pb-4">
                     <div>
                         <div class="flex items-center gap-2">
                             <h3 class="text-xl font-extrabold font-display text-white" x-text="selectedLead?.empresa"></h3>
                             <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-400 capitalize" x-text="selectedLead?.tipo_cliente"></span>
                         </div>
                         <p class="text-xs text-zinc-400 mt-1" x-text="'Contacto: ' + selectedLead?.nombre + ' • Ingresado el ' + formatDate(selectedLead?.created_at)"></p>
+                    </div>
+
+                    <div>
+                        <a :href="'/admin/leads/' + selectedLead?.id + '/pdf'" target="_blank"
+                           class="px-3.5 py-2 rounded-xl bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 border border-emerald-500/30 text-xs font-bold transition-all flex items-center gap-2">
+                            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+                            <span>Generar Presupuesto PDF</span>
+                        </a>
                     </div>
                 </div>
 

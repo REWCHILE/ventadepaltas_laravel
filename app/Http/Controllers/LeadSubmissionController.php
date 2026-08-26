@@ -54,13 +54,8 @@ class LeadSubmissionController extends Controller
             'descripcion' => "Cotización ingresada desde {$lead->pagina_origen}",
         ]);
 
-        // 3. Send Notification Email
-        $adminEmail = config('mail.admin_email', env('ADMIN_NOTIFICATION_EMAIL', 'admin@ventadepaltas.cl'));
-        try {
-            Mail::to($adminEmail)->send(new NewLeadNotificationMail($lead));
-        } catch (\Exception $e) {
-            Log::error('Error sending lead notification email: ' . $e->getMessage());
-        }
+        // 3. Dispatch Notifications (Email, Webhook, Telegram)
+        \App\Services\LeadNotificationService::notifyAll($lead);
 
         if ($request->wantsJson() || $request->ajax()) {
             return response()->json([

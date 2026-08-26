@@ -32,8 +32,8 @@
                     <div>
                         <h4 class="font-bold text-zinc-900 dark:text-white text-sm font-display">WhatsApp Ventas</h4>
                         <p class="text-xs text-zinc-500 mt-0.5">Lunes a Sábado: 06:00 - 18:00</p>
-                        <a href="tel:+56912345678" class="block text-sm font-bold text-emerald-600 dark:text-emerald-400 mt-1 hover:underline">
-                            +56 9 1234 5678
+                        <a href="https://wa.me/56957803219" target="_blank" class="block text-sm font-bold text-emerald-600 dark:text-emerald-400 mt-1 hover:underline">
+                            +56 9 5780 3219
                         </a>
                     </div>
                 </div>

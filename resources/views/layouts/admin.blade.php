@@ -99,6 +99,12 @@
                     <i data-lucide="file-text" class="w-4 h-4 text-emerald-500"></i>
                     <span>Blog de Artículos</span>
                 </a>
+
+                <a href="{{ route('admin.settings.smtp') }}"
+                   class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-colors {{ request()->routeIs('admin.settings.*') ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'text-zinc-400 hover:bg-zinc-800 hover:text-white' }}">
+                    <i data-lucide="settings" class="w-4 h-4 text-emerald-500"></i>
+                    <span>SMTP & Alertas</span>
+                </a>
             </nav>
         </div>
 

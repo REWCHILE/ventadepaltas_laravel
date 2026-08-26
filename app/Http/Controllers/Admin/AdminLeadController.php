@@ -61,6 +61,11 @@ class AdminLeadController extends Controller
         ]);
     }
 
+    public function pdfQuote(Lead $lead): View
+    {
+        return view('admin.leads.pdf-quote', compact('lead'));
+    }
+
     public function updateStatus(Request $request, Lead $lead): JsonResponse
     {
         $validated = $request->validate([

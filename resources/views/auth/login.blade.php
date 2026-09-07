@@ -28,6 +28,19 @@
     </script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Override Chrome/Edge Autofill bright white background */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            -webkit-text-fill-color: #f4f4f5 !important;
+            -webkit-box-shadow: 0 0 0px 1000px #27272a inset !important;
+            box-shadow: 0 0 0px 1000px #27272a inset !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    </style>
 </head>
 <body class="bg-zinc-950 text-zinc-100 min-h-screen flex items-center justify-center p-4 font-sans selection:bg-emerald-500 selection:text-white">
 
@@ -60,7 +73,7 @@
         </div>
         @endif
 
-        <form action="{{ url('/login') }}" method="POST" class="space-y-4">
+        <form action="{{ url('/login') }}" method="POST" class="space-y-4" autocomplete="off">
             @csrf
 
             <div>
@@ -68,8 +81,13 @@
                     Correo Electrónico
                 </label>
                 <div class="relative">
-                    <input type="email" name="email" value="{{ old('email', 'admin@ventadepaltas.cl') }}" required
-                           class="w-full bg-zinc-850 border border-zinc-700/80 rounded-xl py-2.5 px-3.5 text-white text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all placeholder-zinc-500">
+                    <input type="email" 
+                           name="email" 
+                           value="{{ old('email') }}" 
+                           required 
+                           autocomplete="off"
+                           placeholder="admin@ventadepaltas.cl"
+                           class="w-full bg-zinc-800 border border-zinc-700 rounded-xl py-3 px-4 text-white text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all placeholder-zinc-500">
                 </div>
             </div>
 
@@ -78,8 +96,12 @@
                     Contraseña
                 </label>
                 <div class="relative">
-                    <input type="password" name="password" value="admin123" required
-                           class="w-full bg-zinc-850 border border-zinc-700/80 rounded-xl py-2.5 px-3.5 text-white text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all placeholder-zinc-500">
+                    <input type="password" 
+                           name="password" 
+                           required 
+                           autocomplete="current-password"
+                           placeholder="••••••••"
+                           class="w-full bg-zinc-800 border border-zinc-700 rounded-xl py-3 px-4 text-white text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all placeholder-zinc-500">
                 </div>
             </div>
 
@@ -91,7 +113,7 @@
             </div>
 
             <button type="submit"
-                    class="w-full cursor-pointer bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 active:scale-[0.98] text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-emerald-600/20 hover:shadow-xl flex items-center justify-center gap-2 transition-all text-sm">
+                    class="w-full cursor-pointer bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 active:scale-[0.98] text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-emerald-600/20 hover:shadow-xl flex items-center justify-center gap-2 transition-all text-sm">
                 <i data-lucide="key-round" class="w-4 h-4"></i>
                 <span>Ingresar al Sistema</span>
             </button>

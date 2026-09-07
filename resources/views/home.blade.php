@@ -112,9 +112,9 @@
                         <span>Cotizar Abastecimiento B2B</span>
                         <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
-                    <a href="#calibres" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-700 text-zinc-200 text-sm font-semibold transition-all">
-                        <span>Explorar Calibres</span>
-                        <i data-lucide="layers" class="w-4 h-4 text-emerald-400"></i>
+                    <a href="https://wa.me/56957803219?text=Hola%20VENTADEPALTAS.CL,%20me%20gustar%C3%ADa%20cotizar%20Palta%20Hass%20al%20por%20mayor%20para%20mi%20negocio." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-zinc-900/80 hover:bg-zinc-800 border border-emerald-500/30 text-white text-sm font-semibold transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                        <span>WhatsApp: +56 9 5780 3219</span>
                     </a>
                 </div>
 

@@ -164,6 +164,10 @@
 
             <!-- Actions -->
             <div class="hidden md:flex items-center gap-3">
+                <a href="https://wa.me/56957803219" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 text-xs font-bold transition-all">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-500"></i>
+                    <span>+56 9 5780 3219</span>
+                </a>
                 <a href="#cotizar" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white text-xs font-bold shadow-md shadow-emerald-600/20 transition-all">
                     <span>Cotizar B2B</span>
                     <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
@@ -196,7 +200,11 @@
             <a href="{{ route('blog.index') }}" class="block px-3 py-2 rounded-lg text-sm font-medium text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800">Blog Informativo</a>
             <a href="{{ route('contacto') }}" class="block px-3 py-2 rounded-lg text-sm font-medium text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800">Contacto</a>
 
-            <div class="pt-2">
+            <div class="pt-2 space-y-2">
+                <a href="https://wa.me/56957803219" target="_blank" class="w-full text-center flex items-center justify-center gap-2 py-2.5 rounded-xl border border-emerald-500/40 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 font-bold text-xs">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>WhatsApp / Ventas: +56 9 5780 3219</span>
+                </a>
                 <a href="#cotizar" @click="mobileMenu = false" class="w-full text-center block py-2.5 rounded-xl bg-emerald-600 text-white font-bold text-xs shadow-md">
                     Cotizar Mayorista Directo
                 </a>

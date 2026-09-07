@@ -75,7 +75,7 @@
                 <label class="block text-[11px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider mb-1.5">
                     Teléfono / WhatsApp *
                 </label>
-                <input type="tel" x-model="form.telefono" required placeholder="+56 9 8765 4321"
+                <input type="tel" x-model="form.telefono" required placeholder="+56 9 5780 3219"
                        class="w-full bg-zinc-50 dark:bg-zinc-800/80 border border-zinc-300 dark:border-zinc-700/80 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all">
             </div>
         </div>

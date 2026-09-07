@@ -78,7 +78,7 @@
 
             <div>
                 <label class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1.5">
-                    Correo Electrónico
+                    Usuario / Correo Electrónico
                 </label>
                 <div class="relative">
                     <input type="email" 
@@ -86,7 +86,7 @@
                            value="{{ old('email') }}" 
                            required 
                            autocomplete="off"
-                           placeholder="admin@ventadepaltas.cl"
+                           placeholder="Ingresa tu usuario"
                            class="w-full bg-zinc-800 border border-zinc-700 rounded-xl py-3 px-4 text-white text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all placeholder-zinc-500">
                 </div>
             </div>
@@ -100,7 +100,7 @@
                            name="password" 
                            required 
                            autocomplete="current-password"
-                           placeholder="••••••••"
+                           placeholder="Ingresa tu contraseña"
                            class="w-full bg-zinc-800 border border-zinc-700 rounded-xl py-3 px-4 text-white text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all placeholder-zinc-500">
                 </div>
             </div>
